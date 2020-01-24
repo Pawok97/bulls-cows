@@ -17,4 +17,7 @@ public class GameMoveService {
     public void addGameMove(GameMove gameMove){
         gameMoveRepository.save(gameMove);
     }
+    public Iterable<GameMove> findAll(){
+        return gameMoveRepository.findAll();
+    }
 }
