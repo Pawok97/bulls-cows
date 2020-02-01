@@ -1,0 +1,80 @@
+body {
+    font-family: 'PT Sans', sans-serif;
+
+}
+
+/*Header*/
+
+.header {
+
+    background: #24292e;
+    font-size: 36px;
+    color: #f8f9fa;
+    text-align: center;
+
+}
+
+.header__logo {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 40px;
+
+}
+
+.header__title {
+    font-family: 'Miltonian Tattoo', cursive;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.header__login {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+}
+
+.btn-light {
+    font-size: 15px;
+    width: 90px;
+    margin-top: 10px;
+    font-weight: normal;
+    background: #f8f9fa;
+}
+
+.menu__item a {
+    font-size: 22px;
+    font-weight: 700;
+    color: #f8f9fa;
+}
+
+.menu__item {
+    display: block;
+    margin-top: 8px;
+    margin-left: 40px;
+
+}
+
+/*footer*/
+
+.footer__title {
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+footer {
+    color: #f8f9fa;
+    background: #24292e;
+
+}
+
+.footer__name a {
+
+}
+
+.footer__name {
+    color: #ffb899;
+    text-decoration: none;
+    font-weight: 700;
+}

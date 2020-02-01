@@ -1,9 +1,12 @@
 package com.game.bullscows.service;
 
+import com.game.bullscows.model.Game;
 import com.game.bullscows.model.Rating;
 import com.game.bullscows.repository.RatingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class RatingService {
@@ -14,10 +17,28 @@ public class RatingService {
         this.ratingRepository = ratingRepository;
     }
 
-    public void addRating(Rating rating){
+    public void addRating(Rating rating) {
         ratingRepository.save(rating);
     }
-    public void editRating(Rating rating){
+
+
+    public Rating findFirstById(Long id) {
+
+        return ratingRepository.findFirstById(id);
+    }
+    public Iterable<Rating> findAllRating(){
+        return ratingRepository.findAll();
+    }
+
+    public void updateRating(Rating rating, List<Game> gameList) {
+        rating.check(gameList);
         ratingRepository.save(rating);
     }
+    public Rating findRatingByUserId(Long id){
+        return ratingRepository.findFirstByUserId(id);
+    }
+    public List<Rating> sortedRating(){
+        return ratingRepository.sortedRating();
+    }
+
 }

@@ -1,0 +1,16 @@
+.offer {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 400px;
+}
+.offer__title {
+    margin-bottom: 70px;
+}
+.offer_return {
+    margin-bottom: 60px;
+}
+.offer__yes {
+    font-size: 20px;
+    width: 100px;
+
+}

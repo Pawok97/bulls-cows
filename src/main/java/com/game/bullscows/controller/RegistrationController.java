@@ -6,10 +6,13 @@ import com.game.bullscows.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 
+import javax.validation.Valid;
 import java.util.Collections;
+import java.util.Map;
 
 @Controller
 public class RegistrationController {
@@ -26,14 +29,20 @@ public class RegistrationController {
     }
 
     @PostMapping("/registration")
-    public String addUser(User user, Model model) {
-        User newUser = userService.findByUsername(user);
-        if (newUser!=null){
+    public String addUser(@Valid User user, BindingResult bindingResult, Model model) {
 
-            return "registration";
+        if (user.getPassword()!=null && !user.getPassword().equals(user.getPasswordCheck())){
+            model.addAttribute("passwordError","passwords are different");
         }
-        user.setRoles(Collections.singleton(Role.USER));
-        userService.addUser(user);
+
+        if (bindingResult.hasErrors()){
+            Map<String, String> errors = ControllerUtil.getErrors(bindingResult);
+            model.mergeAttributes(errors);
+            return "/registration";
+        }
+        if (!userService.addUser(user)){
+            model.addAttribute("UsernameError", "user exists");
+        }
         return "redirect:/login";
     }
 }

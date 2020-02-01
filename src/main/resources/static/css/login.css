@@ -1,0 +1,56 @@
+
+.login{
+    background: #f8f9fa;
+    padding-top:100px ;
+    padding-bottom: 300px;
+
+
+}
+.login__title {
+
+
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 50px;
+}
+.form__item{
+    padding-bottom: 20px;
+}
+.form__input {
+    width: 300px;
+}
+.form__label{
+    font-size: 19px;
+    margin-right: 20px;
+    margin-top: 7px;
+    width: 80px;
+
+}
+.form__submit {
+    margin-left: 153px;
+
+}
+
+.registration{
+    background: #f8f9fa;
+    padding-top:100px ;
+    padding-bottom: 300px;
+
+
+}
+.registration__title {
+
+    text-align: center;
+    font-size: 45px;
+    padding-bottom: 50px;
+}
+.registration__formLabel{
+    font-size: 19px;
+    margin-right: 20px;
+    margin-top: 7px;
+    width: 150px;
+}
+.registration__submit {
+    margin-left: 217px;
+}
+

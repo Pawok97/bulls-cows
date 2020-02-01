@@ -1,0 +1,16 @@
+.rating__title {
+    font-weight: bold;
+
+}
+.rating {
+    padding-top: 100px;
+    text-align: center;
+    padding-bottom: 350px;
+    background: #f8f9fa;
+
+}
+.rating__table{
+    width: 800px;
+    margin-left: 300px;
+    margin-top: 50px;
+}
