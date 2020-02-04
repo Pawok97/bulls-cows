@@ -14,14 +14,16 @@
                     <label class="game__label">Enter number:</label>
                     <input class="game__input form-control ${(numberError??)?string('is-invalid','')}" type="text"
                            name="number">
-                    <#if numberError??>
-                        <div class="invalid-feedback">
-                            ${numberError}
-                        </div>
-                    </#if>
-
                     <input class="game_button" type="submit" value="run">
                 </form>
+                <#if numberError??>
+                    <div class="feed">
+                        <span class="feed__text">
+                        ${numberError}
+                        </span>
+                    </div>
+                </#if>
+
             </div>
             <div class="game__table">
                 <table class="table col-lg-5 table-sm">

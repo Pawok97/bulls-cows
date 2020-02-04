@@ -39,7 +39,7 @@
 
 
                 <div class="row">
-                    <input class="form__submit btn btn-secondary col-lg-1" type="submit" value="sign in">
+                    <input class="form__submit btn btn-secondary col-lg-1" type="submit" value="Sign in">
                 </div>
             </form>
         </div>

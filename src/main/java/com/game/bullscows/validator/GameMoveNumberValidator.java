@@ -7,7 +7,7 @@ public class GameMoveNumberValidator implements ConstraintValidator<GameMoveNumb
     @Override
     public boolean isValid(String number, ConstraintValidatorContext constraintValidatorContext) {
 
-        return number.matches("(?!.*(.).*\\1)\\d{4}") && number != null;
+        return number.matches("(?!.*(.).*\\1)\\d{4}");
     }
 
     @Override

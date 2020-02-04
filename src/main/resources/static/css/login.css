@@ -53,4 +53,10 @@
 .registration__submit {
     margin-left: 217px;
 }
+.feed {
+    margin-left: 170px;
+}
 
+.feed__text {
+    color: red;
+}
