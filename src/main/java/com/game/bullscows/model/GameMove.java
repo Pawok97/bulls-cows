@@ -12,7 +12,6 @@ public class GameMove {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @NotBlank(message = "empty")
     @GameMoveNumberConstraint
     private String number;
     private String bulls;

@@ -56,7 +56,7 @@
                     <div class="col-lg-2 ml-auto">
                         <form action="/logout" method="post">
                             <input type="hidden" name="_csrf" value="${_csrf.token}">
-                            <input class="btn btn-light" type="submit" value="sing out">
+                            <input class="btn btn-light" type="submit" value="sign out">
                         </form>
                     </div>
                 </div>

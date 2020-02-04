@@ -45,9 +45,17 @@ public class GameController {
     }
 
     @PostMapping
-    public String addMove(@RequestParam Long gameId, @RequestParam String number) {
-
-        GameMove move = new GameMove(number);
+    public String addMove(@AuthenticationPrincipal User user ,@Valid GameMove number, BindingResult bindingResult, Model model, @RequestParam Long gameId) {
+        if (bindingResult.hasErrors()) {
+            Map<String, String> errorsMap = ControllerUtil.getErrors(bindingResult);
+            Game game = gameService.findLastGameByUserId(user.getId());
+            Iterable<GameMove> moves = gameMoveService.findByGame(game.getId());
+            model.addAttribute("game", game);
+            model.addAttribute("moves", moves);
+            model.mergeAttributes(errorsMap);
+            return "/game";
+        }
+        GameMove move = new GameMove(number.getNumber());
         Game game = gameService.findGameById(gameId);
         game.addMove(move);
         gameMoveService.addGameMove(move);

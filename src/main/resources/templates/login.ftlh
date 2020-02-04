@@ -30,7 +30,6 @@
                     <label class="form__label">Password</label>
                     <input type="password" name="password"
                            class="form__input form-control ${(passwordError??)?string('is-invalid','')}">
-
                 </div>
                 <#if passwordError??>
                     <div class="invalid-feedback">

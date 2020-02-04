@@ -12,9 +12,13 @@
                     <input type="hidden" name="_csrf" value="${_csrf.token}">
                     <input type="hidden" name="gameId" value="${game.id}">
                     <label class="game__label">Enter number:</label>
-                    <input class="game__input form-control" type="text"
+                    <input class="game__input form-control ${(numberError??)?string('is-invalid','')}" type="text"
                            name="number">
-
+                    <#if numberError??>
+                        <div class="invalid-feedback">
+                            ${numberError}
+                        </div>
+                    </#if>
 
                     <input class="game_button" type="submit" value="run">
                 </form>
